@@ -110,6 +110,7 @@
             </div>
           </div> -->
         </div>
+      <!-- Add two Cards -->
         <span class="d-block p-2 text-gray"></span>
         <div class="row">
           <div class="col-sm-6 mb-3 mb-sm-0">
