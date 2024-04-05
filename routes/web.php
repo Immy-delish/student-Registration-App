@@ -2,6 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\ImageController;
+use App\Http\Controllers\HomeController;
+
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,9 +18,17 @@ use App\Http\Controllers\ContactController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
+/* Contact Routes*/
 Route::get('/', [ContactController::class, 'index']);
 Route::post('/addcontact', [ContactController::class, 'add']);
 Route::get('/delete/{id}', [ContactController::class, 'delete']);
 Route::get('/edit/{id}', [ContactController::class, 'edit']);
 Route::post('/edit/{id}', [ContactController::class, 'update']);
+
+/* Images Routes*/
+
+Route::post('/images/upload', [ImageController::class, 'upload'])->name('images.upload');
+
+/* Home Routes*/
+
+Route::get('/home', [HomeController::class, 'index']);

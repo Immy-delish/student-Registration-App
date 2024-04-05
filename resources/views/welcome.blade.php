@@ -40,7 +40,12 @@
                     <input type="text" class="form-control" name="name" placeholder="Name">
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
+
+                <!-- Add a Space after -->
+                <span class="d-block p-2 text-gray"></span>
             </form>
+       <!-- Create an Accordion to Diplay the List of Registratered students.-->
+
         <div class="accordion" id="accordionExample">
           <div class="accordion-item">
             <h2 class="accordion-header">
@@ -110,8 +115,13 @@
             </div>
           </div> -->
         </div>
-      <!-- Add two Cards -->
+        
+        <!-- Add a slight space after the accordion. -->
+
         <span class="d-block p-2 text-gray"></span>
+
+        <!-- Add two Cards -->
+
         <div class="row">
           <div class="col-sm-6 mb-3 mb-sm-0">
             <div class="card">
