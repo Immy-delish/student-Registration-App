@@ -27,8 +27,7 @@ Route::post('/edit/{id}', [ContactController::class, 'update']);
 
 /* Images Routes*/
 
-Route::post('/images/upload', [ImageController::class, 'upload'])->name('images.upload');
 
-/* Home Routes*/
 
-Route::get('/home', [HomeController::class, 'index']);
+Route::get('ajaxImageUpload', 'App\Http\Controllers\AjaxImageUploadController@ajaxImageUpload');
+Route::post('ajaxImageUpload', 'App\Http\Controllers\AjaxImageUploadController@ajaxImageUploadPost')->name('ajaxImageUpload');
