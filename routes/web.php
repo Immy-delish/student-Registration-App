@@ -19,7 +19,7 @@ use App\Http\Controllers\HomeController;
 |
 */
 /* Contact Routes*/
-Route::get('/', [ContactController::class, 'index']);
+Route::get('/devschool/students', [ContactController::class, 'index']);
 Route::post('/addcontact', [ContactController::class, 'add']);
 Route::get('/delete/{id}', [ContactController::class, 'delete']);
 Route::get('/edit/{id}', [ContactController::class, 'edit']);
@@ -27,7 +27,13 @@ Route::post('/edit/{id}', [ContactController::class, 'update']);
 
 /* Images Routes*/
 
-
-
 Route::get('ajaxImageUpload', 'App\Http\Controllers\AjaxImageUploadController@ajaxImageUpload');
 Route::post('ajaxImageUpload', 'App\Http\Controllers\AjaxImageUploadController@ajaxImageUploadPost')->name('ajaxImageUpload');
+
+Route::get('/', function() {
+    return view('home');
+ });
+
+ Route::get('/devschool/courses', function() {
+    return view('courses');
+ });

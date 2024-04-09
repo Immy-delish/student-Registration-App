@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Laravel 5 - Ajax Image Uploading Tutorial</title>
+<title>Image Uploading</title>
+<!-- add icon link -->
+<link rel="icon" href=
+"https://cdn.iconscout.com/icon/premium/png-512-thumb/verified-user-6768727-5568582.png?f=webp&w=256"
+          type="image/x-icon">
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="http://malsup.github.com/jquery.form.js"></script>
 </head>
 <body>
 <div class="container">
-<h1>Laravel 5 - Ajax Image Uploading Tutorial</h1>
+<h1>Image Uploading </h1>
 <form action="{{ route('ajaxImageUpload') }}" enctype="multipart/form-data" method="POST">
 <div class="alert alert-danger print-error-msg" style="display:none">
 <ul></ul>
 </div>
 <input type="hidden" name="_token" value="{{ csrf_token() }}">
 <div class="form-group">
-<label>Alt Title:</label>
-<input type="text" name="title" class="form-control" placeholder="Add Title">
+<label>Image Name:</label>
+<input type="text" name="title" class="form-control" placeholder="File Name">
 </div>
 <div class="form-group">
-<label>Image:</label>
+<label>Choose Image:</label>
 <input type="file" name="image" class="form-control">
 </div>
 <div class="form-group">
@@ -42,7 +46,7 @@ printErrorMsg(response.responseJSON.error);
 }
 }
 };
-function printErrorMsg (msg) {
+function printErrorMsg(msg) {
 $(".print-error-msg").find("ul").html('');
 $(".print-error-msg").css('display','block');
 $.each( msg, function( key, value ) {
